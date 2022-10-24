@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projet Site Thibault James - Mindset</title>
+<style type="text/css">
+
+body {
+    background-color:tan;
+}
+
+
+*,
+*::after,
+*::before {
+  /* box-sizing: border-box; */
+  padding: 0;
+  margin: 0;
+}
+
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+
+
+/* **** Menu **** */
+.burger{
+display: flex;
+float: right;
+margin: 5%;
+justify-content:center;
+flex-direction: column;
+height: 40px;
+    width: 40px;
+    border-radius: 10px;
+    background-color: white;
+    line-height: 2%;
+    padding: 4px;
+    padding-left: 12px;
+}
+
+
+
+.burgerline{
+    display: block;
+    margin-top: 10%;
+    height: 4px;
+    width: 30px;
+    background-color: black;
+    border-radius: 10px;
+}
+
+
+
+.navbarmobile ul {
+    position:sticky;    
+}
+
+nav ul:hover {
+margin-top: 20px;
+display:block;
+}
+
+
+nav ul li {
+    display:none;
+    width: 5em;
+    background-color: pink;
+}
+
+
+nav ul:hover .burgerline {
+    
+    color: pink;
+margin-left: 5%;
+    width: 5em;
+    margin-top: 10%;
+    height: 4px;
+    width: 30px;
+    background-color: pink;
+    border-radius: 4px;
+}
+
+nav ul:hover li {
+    background-color: Pink;  
+    border-radius: 0.4em;
+    display:list-item;
+    height: 2em;
+    width: 15em;
+    text-align:left;
+    margin-left: -15em;
+    list-style-type:none;
+    font-size: 2em;
+    line-height: 2em;
+    text-indent: 1em;
+}
+
+
+@media screen and (min-width: 768px) {
+    .burgerline{
+    background-color: green;
+}
+
+</style>
+
+</head>
+<body>
+    
+
+
+
+<nav class="navbarmobile">
+        <ul class="burger">
+            <li class="burgerline"></li>  
+            <li class="burgerline"></li>
+            <li class="burgerline"></li>
+            <li> Rencontrer des chiens</li>
+            <li> Rencontrer des chats</li>
+            <li> A propos</li>
+            <li> Contact</li>
+        </ul>
+</nav>
+
+
+
+
+<main>
+
+
+</main>
+
+
+
+
+
+</body>
+</html>
+
+
+
+

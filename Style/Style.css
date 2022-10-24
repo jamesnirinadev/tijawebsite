@@ -6,9 +6,9 @@ body{
     background-attachment: fixed;
     background-size: cover;
 }
-
 /* MENU */
-nav{
+
+.navbardesktop {
     width: 100vw;
     height: 7vh;
     position: fixed;
@@ -19,7 +19,8 @@ nav{
 .main_menu{
     line-height: 7vh;
     height: 7vh;
-    display: flex;
+    display: flex;    font-family: Arial, Helvetica, sans-serif;
+
     align-items: center;
     flex-direction: column;
     align-content: center;
@@ -44,7 +45,7 @@ nav{
     font-weight: bold;
 }
 span{
-    width: 100%%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -98,7 +99,9 @@ header div{
 }
 header div img{
     width: 100%;
-    height: 80%;
+    height: 32em;
+    /* width: 100%; origin Ti */
+    /* height: 80%; origin Ti */
 }
 
 main{
@@ -188,3 +191,159 @@ footer{
 }
 
 
+
+
+
+/* **** Menu Navbarmobile **** */
+
+.navbarmobile {
+    display:none;
+}
+
+.burger{
+    display: flex;
+    float: right;
+    margin: 5%;
+    justify-content:center;
+    flex-direction: column;
+    height: 40px;
+    width: 40px;
+    border-radius: 10px;
+    background-color: white;
+    line-height: 2%;
+    padding: 4px;
+    padding-left: 12px;
+}
+
+
+
+.burgerline{
+    display: block;
+    margin-top: 10%;
+    height: 4px;
+    width: 30px;
+    background-color: black;
+    border-radius: 10px;
+}
+
+
+
+.navbarmobile ul {
+    position:sticky;    
+}
+
+nav ul:hover {
+    margin-top: 20px;
+    display:block;
+}
+
+
+nav ul li {
+    display:none;
+    width: 5em;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+    
+    nav ul:hover .burgerline {
+        margin-left: 5%;
+        width: 5em;
+        margin-top: 10%;
+        height: 4px;
+        width: 30px;
+        background-color:#FF00D1;
+        border-radius: 4px;
+    }
+    
+    nav ul:hover li {
+        background-color: white;  
+        border-radius: 0.2em;
+        display:list-item;
+        height: 2em;
+        width: 15em;
+        text-align:left;
+        margin-left: -13em;
+        list-style-type:none;
+        font-size: 2em;
+        line-height: 2em;
+        text-indent: 1em;
+    }
+    
+    
+    nav ul:hover li:nth-child(6),
+    nav ul:hover li:nth-child(7),
+    nav ul:hover li:nth-child(9),
+    nav ul:hover li:nth-child(10)
+    {
+        font-size: 1.8em;
+        margin-left: -14.4em;
+        width: 16.6em;
+        text-indent: 45%;
+    }
+    
+    
+    nav ul li a {      
+        color: black;
+        text-decoration: none;
+    }
+    
+    
+    nav ul li a:hover {
+        color: #FF00D1;
+    }
+    
+    nav ul li span{
+            display: none;
+            height: 5px;
+            border-radius: 100px;
+            background-color: #000000;
+            width: 0%;
+        }
+        
+    
+        
+        nav ul li:hover span {      
+            display:block;
+            position:relative;
+            animation: animationMenu_bar2 1s normal forwards;
+            }
+/*         
+.brmenu {
+font-size: 0.5em;
+} */
+        
+.brmenu {
+
+    font-size: 0.5em;
+}
+
+        @keyframes animationMenu_bar2{
+        0%{
+            width: 0%;
+        }
+        100%{
+            width: 75%;
+        }
+    }
+
+
+    
+    
+    
+    @media screen and (min-width: 768px) {
+        .navbardesktop {
+            display:flex;
+        }
+    }
+            
+    
+    @media screen and (max-width: 768px) {
+        .navbarmobile {
+            display:block;
+        }
+        .navbardesktop {
+            display:none;
+        }
+    }
+    
