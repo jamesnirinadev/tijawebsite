@@ -29,6 +29,14 @@ nav{
     border-radius: 100px;
     background-color: #000000;
     width: 0%;
+    transition-property:width, background-color;
+    transition-duration: 1s;
+}
+.menu_bar_fixe{
+    height: 5px;
+    border-radius: 100px;
+    background-color: #FF00D1;
+    width: 100%;
 }
 .main_menu a{
     text-decoration: none;
@@ -42,33 +50,36 @@ span{
     align-items: center;
 }
 .sous_menu{
+    background-color: #000000;
     text-align: center;
     height: 7vh;
     width: 100%;
     display: none;
     background-color: white;
     box-shadow: 0px 2px 5px black;
+    transition-property: background-color, color;
+    transition-duration: 1s;
 }
+.sous_menu a {
+    transition: color 1s;
+}
+
+
 .main_menu:hover > span a{
     color: #FF00D1;
 }
 .main_menu:hover .menu_bar{
-    animation: animationMenu_bar 1s normal forwards;
+    width: 100%;
+    background-color: #FF00D1;
 }
 .main_menu:hover .sous_menu{
     display: block;
 }
 .sous_menu:hover > a{
-    color: #FFA04F;
+    color: white;
 }
-
-@keyframes animationMenu_bar{
-    0%{
-        width: 0%;
-    }
-    100%{
-        width: 100%;
-    }
+.sous_menu:hover {
+    background-color: #FF00D1;
 }
 /* ************  */
 
