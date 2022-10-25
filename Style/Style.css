@@ -2,7 +2,50 @@ body{
     margin: 0px;
     padding: 0px;
     background-color: white;
-    background-image: url(../Images/Header/header1.jpg);
+
+}
+#body_Accueil{
+    background-image: url(../Images/Header/header_Accueil.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+}
+#body_ContactChat{
+    background-image: url(../Images/Header/header_ContactChat.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+}
+#body_APropos{
+    background-image: url(../Images/Header/header_Accueil.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+}
+#body_Contact{
+    background-image: url(../Images/Header/header_Accueil.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+}
+#body_ContactChatFemelle{
+    background-image: url(../Images/Header/header_Accueil.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+}
+#body_ContactChatMale{
+    background-image: url(../Images/Header/header_Accueil.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+}
+#body_ContactChien{
+    background-image: url(../Images/Header/header_Accueil.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+}
+#body_ContactChienFemelle{
+    background-image: url(../Images/Header/header_Accueil.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+}
+#body_ContactChienMale{
+    background-image: url(../Images/Header/header_Accueil.jpg);
     background-attachment: fixed;
     background-size: cover;
 }
