@@ -12,12 +12,12 @@ body{
 #body_ContactChat{
     background-image: url(../Images/Header/header_ContactChat.jpg);
     background-attachment: fixed;
-    background-size: cover;
+    background-size: 100% 100%;
 }
 #body_APropos{
-    background-image: url(../Images/Header/header_Accueil.jpg);
+    background-image: url(../Images/Header/header_APropos.png);
     background-attachment: fixed;
-    background-size: cover;
+    background-size: 100% 100%;
 }
 #body_Contact{
     background-image: url(../Images/Header/header_Accueil.jpg);
@@ -35,9 +35,9 @@ body{
     background-size: cover;
 }
 #body_ContactChien{
-    background-image: url(../Images/Header/header_Accueil.jpg);
+    background-image: url(../Images/Header/header_ContactChien.png);
     background-attachment: fixed;
-    background-size: cover;
+    background-size: 100% 100%;
 }
 #body_ContactChienFemelle{
     background-image: url(../Images/Header/header_Accueil.jpg);
@@ -153,7 +153,6 @@ main{
 .contenu{
     display: flex;
     flex-direction: column;
-    width: 100vw;
     height: 70vh;
 }
 .titre_contenu{
@@ -289,7 +288,7 @@ nav ul li {
 }
 
     
-    nav ul:hover .burgerline {
+nav ul:hover .burgerline {
         margin-left: 5%;
         width: 5em;
         margin-top: 10%;
@@ -299,7 +298,7 @@ nav ul li {
         border-radius: 4px;
     }
     
-    nav ul:hover li {
+nav ul:hover li {
         background-color: white;  
         border-radius: 0.2em;
         display:list-item;
@@ -314,10 +313,10 @@ nav ul li {
     }
     
     
-    nav ul:hover li:nth-child(6),
-    nav ul:hover li:nth-child(7),
-    nav ul:hover li:nth-child(9),
-    nav ul:hover li:nth-child(10)
+nav ul:hover li:nth-child(6),
+nav ul:hover li:nth-child(7),
+nav ul:hover li:nth-child(9),
+nav ul:hover li:nth-child(10)
     {
         font-size: 1.8em;
         margin-left: -14.4em;
@@ -351,10 +350,77 @@ nav ul li {
             position:relative;
             animation: animationMenu_bar2 1s normal forwards;
             }
-/*         
-.brmenu {
-font-size: 0.5em;
-} */
+
+
+
+/* DEBUT PAGE CONTACT CHAT et CHIEN*/
+#header_ContactPet{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 3em;
+}
+#header_ContactPet > div {
+    width: 50%;
+    height: 50%;
+}
+#contenu_ContactChat, #contenu_ContactChien{
+    height: 77vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+.ss_contenu_ContactPet{
+    
+    width: 40%;
+    height: 55%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    border-radius:20px;
+    box-shadow: 3px 3px 5px rgb(187, 187, 187);
+    transform: scale(1);
+    transition: box-shadow 0.3s linear,transform 0.3s linear;
+}
+#contenu_ContactChat div:nth-of-type(1){
+    background-image: url(../Images/Contenu/ContactChat1.png);
+    background-size: 100% 100%;
+    text-shadow:2px 2px 2px #FF00D1;   
+}
+#contenu_ContactChat div:nth-of-type(2){
+    background-image: url(../Images/Contenu/ContactChat2.png);
+    background-size: 100% 100%;
+    text-shadow:2px 2px 2px #3d93c8;    
+}
+#contenu_ContactChien div:nth-of-type(1){
+    background-image: url(../Images/Contenu/ContactChien1.png);
+    background-size: 100% 100%;
+    text-shadow:2px 2px 2px #FF00D1;    
+}
+#contenu_ContactChien div:nth-of-type(2){
+    background-image: url(../Images/Contenu/ContactChien2.png);
+    background-size: 100% 100%;
+    text-shadow:2px 2px 2px #3d93c8;  
+}
+.ss_contenu_ContactPet a{
+    color: white;
+    text-decoration: none;
+    font-size: 2em;
+}
+
+
+.ss_contenu_ContactPet:hover{
+    box-shadow: 10px 10px 10px rgb(187, 187, 187);
+    transform: scale(1.1);
+}
+/*FIN PAGE CONTACT CHAT et CHIEN*/
+
+
+
         
 .brmenu {
 
@@ -371,16 +437,53 @@ font-size: 0.5em;
     }
 
 
+/*  text */
+    h1 {
+        font-size: 5em;
+    }
+
+    .h1_header {
+        margin-top: 10%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    h2{
+        font-size: 2.5em;
+    }
+
+    form {
+        width: 50vw;
+    }
+
+    /*  Page Contact */
+
+    #contenu1_Contact {
+        margin-top: 5%;
+        padding: 5px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 125vh;
+    }
+
+    #formulaire_Contact {
+        background-color: #ff00d01a;
+    }
+
     
     
-    
+/*  @media */
+
     @media screen and (min-width: 768px) {
         .navbardesktop {
             display:flex;
         }
     }
-            
-    
+
+
     @media screen and (max-width: 768px) {
         .navbarmobile {
             display:block;
@@ -388,5 +491,37 @@ font-size: 0.5em;
         .navbardesktop {
             display:none;
         }
-    }
-    
+
+
+        #formulaire_Contact {
+            font-size:2em;
+            width: 70%
+        }
+
+
+        form p {
+            width: fit-content;
+        }
+
+        input, select, textarea {
+            font-size:1em;
+            height: 5vh;
+            width: 40vw;
+        }
+
+        input[type="radio"], input[type="checkbox"] 
+        {
+            margin: 0px -100px 15px -72px;
+        }
+
+        textarea {
+            height: 30vh;
+            width: 60vw;
+        }
+
+        #contenu1_Contact {
+            justify-content:unset;
+            height: 288vh;
+        }
+    }  
+
