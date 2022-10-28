@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Inscription</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="./Style/Style.css">
+        <link rel="shortcut icon" href="./Images/Logo/logo_DogCat.png" type="image/x-icon">
+    </head>
+    <body id="body_Inscription">
+        <nav class="navbardesktop">
+            <div><a href="./Accueil.html"><img src="./Images/Logo/logo_DogCat.png" alt="logo_chat" height="100%"></a></div>
+
+            <div class="main_menu">
+                <span><a href="./ContactChien.html">Rencontrer des chiens</a>
+                    <div class="menu_bar"></div></span>
+                    <div class="sous_menu">
+                        <a href="./ContactChienMale.html">Mâles</a>
+                    </div>
+                    <div class="sous_menu">
+                        <a href="./ContactChienFemelle.html">Femelles</a>
+                    </div>
+            </div>
+            <div class="main_menu">
+                <span><a href="./ContactChat.html">Rencontrer des chats</a>
+                    <div class="menu_bar"></div></span>
+                    <div class="sous_menu">
+                        <a href="./ContactChatMale.html">Mâles</a>
+                    </div>
+                    <div class="sous_menu">
+                        <a href="./ContactChatFemelle.html">Femelles</a>
+                    </div>
+            </div>
+            <div class="main_menu"><span><a href="./APropos.html">A propos</a>
+                <div class="menu_bar"></div></span></div>
+            <div class="main_menu"><span><a href="./Contact.html">Contact</a>
+                <div class="menu_bar_fixe"></div></span></div>
+
+            <div><a href="./Accueil.html"><img src="./Images/Logo/logo_DogCatInv.png" alt="logo_chien" height="100%"></a></div>
+        </nav>
+
+
+
+
+        <nav class="navbarmobile">
+            <ul class="burger">
+                <li class="burgerline"></li>
+                <li class="burgerline"></li>
+                <li class="burgerline"></li>
+                <li><a href="./Accueil.html">Accueil</a></li>
+                <li><a href="./ContactChien.html">Rencontrer des chiens</a></li>
+                <li><a href="./ContactChat.html">Rencontrer des chats</a></li>
+                <li><a href="./APropos.html">A propos</a></li>
+                <li><a href="./Contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <header>
+            <h1 class="h1_header">INSCRIPTION</h1>
+        </header>
+        <main>
+            <div id="contenu1_Inscription" class="contenu">
+                <h2 class="h2">Bienvenue sur la page d'inscription. </h2>
+                    <br>
+                    <br />
+
+
+                    <fieldset id="formulaire_Inscription">
+                        <legend>Formulaire d'inscription</legend>
+
+
+                        <form method="POST" action="traitement">
+
+
+                            <p>
+                                <label for="Name">Entrez le nom de votre animal</label>
+                                <input type="text" name="name" id="name" placeholder="ex: Adeline" required="required"/>
+
+                                <br />
+                                <br />
+
+
+
+                                De quel type est votre animal ?
+                                <br/>
+                                        <input type="radio" name="choix_animal" id="chat"/>
+                                        <label for="chat">chat</label>
+                                <br />
+                                        <input type="radio" name="choix_animal" id="chien"/>
+                                        <label for="chien">chien</label>
+                                <br />
+                                <br />
+
+                                <label for="Name">Entrez votre nom</label>
+                                <input type="text" name="name" id="name" placeholder="ex: Adeline" required="required"/>
+
+                                <br />
+                                <br />
+
+
+                                <label for="mail">Entrez votre adresse email</label>
+                                <input type="mail" name="mail" id="mail" placeholder="ex: chatToutDoux75@gmail.com"/>
+                                <br />
+                                <br />
+
+
+                                <label for="num">Entrez votre numéro de téléphone</label>
+                                <input type="tel" name="num" id="num" placeholder="07 06 07 06 07"/>
+
+                                <br />
+                                <br />
+
+
+
+
+
+                                <label for="ville">Sélectionnez votre ville</label>
+                                <select name="ville" id="ville">
+                                    <option value="Paris">Paris</option>
+                                    <option value="Versailles">Versailles</option>
+                                    <option value="Rambouillet">Rambouillet</option>
+                                    <option value="Orly">Orly</option>
+                                    <option value="Roissy">Roissy</option>
+                                    <option value="Lyon">Lyon</option>
+                                    <option value="Montpellier ">Montpellier </option>
+                                    <option value="Strasbourg">Strasbourg</option>
+                                    <option value="Lille">Lille</option>
+                                    <option value="Bordeaux" selected="selected">Bordeaux</option>
+                                    <option value="Marseille">Marseille</option>
+                                    <option value="Toulouse">Toulouse</option>
+                                </select>
+                                <br />
+                                <br />
+
+
+
+                                Vous attendez une réponse ?
+                                <br/>
+
+                                        <input type="radio" name="priorite_reponse" id="urgente"/>
+                                        <label for="urgente">urgente</label>
+                                <br />
+                                        <input type="radio" name="priorite_reponse" id="pas-urgente"/>
+                                        <label for="pas-urgente">pas urgente</label>
+                                <br />
+                                        <input type="radio" name="priorite_reponse" id="un-jour-peut-etre"/>
+                                        <label for="un-jour-peut-etre">un jour peut être</label>
+                                <br />
+                                <br />
+                                <br />
+
+
+                                    Par quel moyen souhaitez-vous être contacté ? <br/>
+                                    <i style="font-size:0.8em">(plusieurs réponses possibles)</i>
+                                    <br/>
+
+                                    <input type="checkbox" name="email" checked="checked" id="email"/>
+                                    <label for="email">email</label>
+
+                                    <br />
+                                    <input type="checkbox" name="Telephone" id="Telephone"/>
+                                    <label for="Telephone">Téléphone</label>
+
+                                    <br />
+                                    <input type="checkbox" name="pigeon-voyageur" id="pigeon-voyageur"/>
+                                    <label for="pigeon-voyageur">Pigeon voyageur</label>
+
+
+                                    <br />
+                                    <br />
+                                    <br />
+                                    <br />
+
+
+                                    <input id="submit" type="submit" value="Envoyer">
+                        </p>
+
+
+
+                        </form>
+
+                    </fieldset>
+
+            </div>
+
+        </main>
+
+        <footer>
+            <div class="div_footer"></div>
+            <div class="div_footer">
+                <span>Suivez-nous !</span>
+                <div class="logo_RS">
+                    <div class="logo">
+                        <a href="https://www.facebook.com" target="_blank"><img src="./Images/Logo/ReseauSociaux/logo_facebook.png" alt="logo_facebook" width="40px" height="40px"></a>
+                    </div>
+                    <div class="logo">
+                        <a href="https://www.instagram.com" target="_blank"><img src="./Images/Logo/ReseauSociaux/logo_instagram.png" alt="logo_facebook" width="100%" height="100%"></a>
+                    </div>
+                    <div class="logo">
+                        <a href="https://www.youtube.com" target="_blank"><img src="./Images/Logo/ReseauSociaux/logo_youtube.png" alt="logo_facebook" width="100%" height="100%"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="div_footer"></div>
+        </footer>
+    </body>
+
+
+</html>

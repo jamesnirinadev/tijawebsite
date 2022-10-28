@@ -2,53 +2,67 @@ body{
     margin: 0px;
     padding: 0px;
     background-color: white;
-
+    font-family: Arial, Helvetica, sans-serif;
+    color: #660066;
 }
+
+
 #body_Accueil{
     background-image: url(../Images/Header/header_Accueil.jpg);
     background-attachment: fixed;
     background-size: cover;
 }
-#body_ContactChat{
-    background-image: url(../Images/Header/header_ContactChat.jpg);
-    background-attachment: fixed;
-    background-size: 100% 100%;
-}
 #body_APropos{
     background-image: url(../Images/Header/header_APropos.png);
     background-attachment: fixed;
-    background-size: 100% 100%;
+    background-size: cover;
 }
 #body_Contact{
-    background-image: url(../Images/Header/header_Accueil.jpg);
+    background-image: url(../Images/Header/header_Contact.jpeg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: 50% 80%;
+}
+#body_ContactChat{
+    background-image: url(../Images/Header/header_ContactChat.jpg);
     background-attachment: fixed;
     background-size: cover;
 }
 #body_ContactChatFemelle{
-    background-image: url(../Images/Header/header_Accueil.jpg);
+    background-image: url(../Images/Header/header_ContactChat.jpg);
     background-attachment: fixed;
     background-size: cover;
 }
 #body_ContactChatMale{
-    background-image: url(../Images/Header/header_Accueil.jpg);
+    background-image: url(../Images/Header/header_ContactChat.jpg);
     background-attachment: fixed;
     background-size: cover;
 }
 #body_ContactChien{
     background-image: url(../Images/Header/header_ContactChien.png);
     background-attachment: fixed;
-    background-size: 100% 100%;
+    background-size: cover;
 }
 #body_ContactChienFemelle{
-    background-image: url(../Images/Header/header_Accueil.jpg);
+    background-image: url(../Images/Header/header_ContactChien.png);
     background-attachment: fixed;
     background-size: cover;
 }
 #body_ContactChienMale{
-    background-image: url(../Images/Header/header_Accueil.jpg);
+    background-image: url(../Images/Header/header_ContactChien.png);
     background-attachment: fixed;
     background-size: cover;
 }
+#body_Inscription{
+    background-image: url(../Images/Header/header_Inscription.jpeg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: 50% 80%;
+
+}
+
+
+
 /* MENU */
 
 .navbardesktop {
@@ -58,12 +72,13 @@ body{
     background-color: white;
     display: flex;
     justify-content: space-around;
+    z-index: 1000;
 }
 .main_menu{
     line-height: 7vh;
     height: 7vh;
-    display: flex;    font-family: Arial, Helvetica, sans-serif;
-
+    display: flex;    
+    font-family: Arial, Helvetica, sans-serif;
     align-items: center;
     flex-direction: column;
     align-content: center;
@@ -71,7 +86,7 @@ body{
 .menu_bar{
     height: 5px;
     border-radius: 100px;
-    background-color: #000000;
+    background-color: #660066;
     width: 0%;
     transition-property:width, background-color;
     transition-duration: 1s;
@@ -84,7 +99,7 @@ body{
 }
 .main_menu a{
     text-decoration: none;
-    color: black;
+    color: #660066;
     font-weight: bold;
 }
 span{
@@ -94,21 +109,19 @@ span{
     align-items: center;
 }
 .sous_menu{
-    background-color: #000000;
+    background-color: #660066;
     text-align: center;
     height: 7vh;
     width: 100%;
     display: none;
     background-color: white;
-    box-shadow: 0px 2px 5px black;
+    box-shadow: 0px 2px 5px #660066;
     transition-property: background-color, color;
     transition-duration: 1s;
 }
 .sous_menu a {
     transition: color 1s;
 }
-
-
 .main_menu:hover > span a{
     color: #FF00D1;
 }
@@ -125,6 +138,10 @@ span{
 .sous_menu:hover {
     background-color: #FF00D1;
 }
+
+nav div a img {
+    filter: invert(13%) sepia(41%) saturate(7447%) hue-rotate(291deg) brightness(74%) contrast(112%);
+}
 /* ************  */
 
 
@@ -139,12 +156,14 @@ header{
 header div{
     display: flex;
     align-items: center;
+    flex-direction: column;
 }
 header div img{
-    width: 100%;
+    margin-top: 10vh;
+    width: 60vw;
     height: 32em;
-    /* width: 100%; origin Ti */
-    /* height: 80%; origin Ti */
+    filter: invert(13%) sepia(41%) saturate(7447%) hue-rotate(291deg) brightness(74%) contrast(112%);
+    z-index:-5;
 }
 
 main{
@@ -153,6 +172,7 @@ main{
 .contenu{
     display: flex;
     flex-direction: column;
+    width: 100vw;
     height: 70vh;
 }
 .titre_contenu{
@@ -264,14 +284,15 @@ footer{
     margin-top: 10%;
     height: 4px;
     width: 30px;
-    background-color: black;
+    background-color: #660066;
     border-radius: 10px;
 }
 
 
 
 .navbarmobile ul {
-    position:sticky;    
+    position:sticky;
+    box-shadow: 2px 3px 10px #660066;
 }
 
 nav ul:hover {
@@ -287,8 +308,8 @@ nav ul li {
     font-weight: bold;
 }
 
-    
-nav ul:hover .burgerline {
+
+    nav ul:hover .burgerline {
         margin-left: 5%;
         width: 5em;
         margin-top: 10%;
@@ -297,9 +318,9 @@ nav ul:hover .burgerline {
         background-color:#FF00D1;
         border-radius: 4px;
     }
-    
-nav ul:hover li {
-        background-color: white;  
+
+    nav ul:hover li {
+        background-color: white;
         border-radius: 0.2em;
         display:list-item;
         height: 2em;
@@ -311,46 +332,48 @@ nav ul:hover li {
         line-height: 2em;
         text-indent: 1em;
     }
-    
-    
-nav ul:hover li:nth-child(6),
-nav ul:hover li:nth-child(7),
-nav ul:hover li:nth-child(9),
-nav ul:hover li:nth-child(10)
-    {
-        font-size: 1.8em;
-        margin-left: -14.4em;
-        width: 16.6em;
-        text-indent: 45%;
-    }
-    
-    
-    nav ul li a {      
-        color: black;
+
+
+
+    nav ul li a {
+        color: #660066;
         text-decoration: none;
     }
-    
-    
+
+
     nav ul li a:hover {
-        color: #FF00D1;
+        color: #FF249B;
     }
-    
+
     nav ul li span{
             display: none;
             height: 5px;
             border-radius: 100px;
-            background-color: #000000;
+            background-color: #FF249B;
             width: 0%;
         }
-        
-    
-        
-        nav ul li:hover span {      
+
+
+
+        nav ul li:hover span {
             display:block;
             position:relative;
             animation: animationMenu_bar2 1s normal forwards;
             }
 
+
+        .brmenu {
+            font-size: 0.5em;
+        }
+
+                @keyframes animationMenu_bar2{
+                0%{
+                    width: 0%;
+                }
+                100%{
+                    width: 75%;
+                }
+            }
 
 
 /* DEBUT PAGE CONTACT CHAT et CHIEN*/
@@ -420,24 +443,197 @@ nav ul:hover li:nth-child(10)
 /*FIN PAGE CONTACT CHAT et CHIEN*/
 
 
-
-        
-.brmenu {
-
-    font-size: 0.5em;
+/*DEBUT PAGE A PROPOS*/
+#test{
+    width: 100%;
+    height: 50vh;
+    text-align: center;
+    font-size: 1.5em;
+    background-color: white;
+    padding-top: 50px;
 }
+#test p{
+    margin-left: 100px;
+    margin-right: 100px;
+}
+#contenu_APropos{
+    height: 77vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
 
-        @keyframes animationMenu_bar2{
-        0%{
-            width: 0%;
-        }
-        100%{
-            width: 75%;
-        }
-    }
+}
+#contenu_APropos > div{
+    height: 90%;
+    width: 27%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 20px;
+}
+.APropos_james div:nth-of-type(1){
+    background-image: url(../Images/Contenu/James.jpg);
+    background-size: 100% 100%;
+    border-radius: 20px 10px;
+    box-shadow: 2px 2px 10px #FF00D1;
+    width: 20%;
+    height: 100px;
+    margin: 20px;
+}
+.APropos_james div:nth-of-type(2){
+    width: 100%;
+    text-align: justify;
+}
+.APropos_thibault div:nth-of-type(1){
+    background-image: url(../Images/Contenu/thibault.jpg);
+    background-size: 100% 100%;
+    border-radius: 20px 10px;
+    box-shadow: 2px 2px 10px #FF00D1;
+    width: 20%;
+    height: 100px;
+    margin: 20px;
+}
+.APropos_thibault div:nth-of-type(2){
+    width: 100%;
+    text-align: justify;
+}
+#contenu_APropos p{
+    font-size: 1.5em;
+    margin: 10px;
+}
+/*FIN PAGE A PROPOS*/
+
+/*DEBUT PAGE CONTACT CHAT GENRE*/
+.contenu_contactChatFemelle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    height: 80vh;
+}
+/*FIN PAGE CONTACT CHAT GENRE*/
+
+/*DEBUT SLIDER*/
+.carousel {
+    margin: 20px auto;
+    overflow: hidden;
+    text-align: center;
+    width: 50%;
+  }
+  
+  .slides {
+    display: flex;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;  
+    scroll-behavior: smooth;
+  }
+  
+  .slides-item {
+    align-items: center;
+    border-radius: 10px;
+    display: flex;
+    flex-shrink: 0;
+    font-size: 100px;
+    height: 400px;
+    justify-content: center;
+    margin: 0 1rem;
+    
+    scroll-snap-align: start;
+    transform: scale(1);
+    transform-origin: center center;
+    transition: transform .5s;
+    width: 100%;
+  }
+  
+  .carousel__nav {
+    padding: 1.25rem .5rem;
+  }
+  
+  .slider-nav {
+    align-items: center;
+    background-color: #ddd;
+    border-radius: 50%;
+    color: #000;
+    display: inline-flex;
+    height: 1.5rem;
+    justify-content: center;
+    padding: .5rem;
+
+    text-decoration: none;
+    width: 1.5rem;
+  }
+  
+  .slider-nav:hover,
+  .slider-nav:active {
+    background-color: #000;
+    color: #fff;
+  }
+  
+  .slide-1 {
+    background-image: url(../Images/Contenu/ContactChien2.png);
+    background-size: 100% 100%;
+  }
+  
+  .slide-2 {
+    background-image: url(../ProjetHTML/Images/Contenu/ContactChat1.png);
+    background-size: 100% 100%;
+  }
+  
+  .slide-3 {
+    background-color: #cdf;
+  }
+  
+  .slide-4 {
+    background-color: #dca;
+  }
+  
+  .slide-5 {
+    background-color: #ffc;
+  }
+/*FIN SLIDER*/
 
 
-/*  text */
+
+
+/* **** Bouton Inscription Accueil **** */
+            .bouton_inscription {
+                text-decoration: none;
+                height: 20px;
+                width: 180px;
+                padding: 10px;
+                font-size: 1em;
+                color: #FFFFFF;
+                background-color: #FF249B;
+                border-radius: 24px;
+                border: 4px solid #FFFFFF;
+                box-shadow: 3px 3px 12px #660066;
+               display: block;
+               position: fixed;
+                margin-top: 10vh;
+                margin-left: -78vw;
+                text-indent: 5%;
+
+                }
+
+            .bouton_inscription:hover {
+                padding: 10px;
+                color: #FF249B;
+                background-color: #e2cafb;
+                border: 4px solid #660066;
+                box-shadow: 1px 1px 4px #FF249B;
+                }
+
+           .bouton_inscription a {
+                Text-Decoration: None;
+                color: #FFFFFF;
+               }
+
+           .bouton_inscription:hover a{
+               color: #660066;
+                }
+
+    /* **** text ***** */
     h1 {
         font-size: 5em;
     }
@@ -451,15 +647,98 @@ nav ul:hover li:nth-child(10)
 
     h2{
         font-size: 2.5em;
+        text-align: center;
     }
 
+
+
+
+    /* **** formulaire ***** */
     form {
         width: 50vw;
     }
 
-    /*  Page Contact */
+    input,
+    select,
+    textarea,
+    input {
+        background: #fff;
+        color: #ff249B;
+    }
 
-    #contenu1_Contact {
+
+    input:focus,
+    input:hover,
+    select:focus,
+    select:hover,
+    textarea:focus,
+    textarea:hover,
+    input[type="submit"]:focus,
+    input[type="submit"]:hover,
+    input[type="checkbox"]:hover,
+    input[type="checkbox"]:focus,
+    input[type='radio']:hover,
+    input[type='radio']:focus {
+        background: #ff249B;
+        color: #fff;
+        box-shadow:0 0 5px 0px #FF249B inset;
+    }
+
+    input[type="radio"],
+    input[type="checkbox"] {
+        -webkit-appearance:none;
+        width:20px;
+        height:20px;
+        border:1px solid #660066;
+        border-radius:50%;
+        outline:none;
+        box-shadow:0 0 5px 0px gray inset;
+      }
+
+    input[type='radio']:before,
+    input[type='checkbox']:before {
+        content:'';
+        display:block;
+        width:60%;
+        height:60%;
+        margin: 20% auto;
+        border-radius:50%;
+    }
+
+    input[type='radio']:checked:before,
+    input[type='checkbox']:checked:before {
+        background:#660066;
+      }
+
+      input[type='checkbox'],
+      input[type="checkbox"]:hover,
+      input[type="checkbox"]:focus,
+      input[type='checkbox']:before,
+      input[type='checkbox']:checked:before {
+      border-radius: 0%;
+      }
+
+
+    input[type="submit"] {
+        font-size: 1.2em;
+        padding: 0px 8px 0px 8px;
+        height: 40px;
+        border-radius: 30%/80%;
+    }
+
+
+    input:active,
+    input:visited,
+    input:checked {
+        color: #ff249B;
+    }
+
+
+
+    /* **** Page Contact et page Inscription ***** */
+
+    #contenu1_Contact,
+    #contenu1_Inscription {
         margin-top: 5%;
         padding: 5px;
         display: flex;
@@ -469,31 +748,84 @@ nav ul:hover li:nth-child(10)
         height: 125vh;
     }
 
-    #formulaire_Contact {
+    #formulaire_Contact,
+    #formulaire_Inscription
+     {
         background-color: #ff00d01a;
+        color: #660066;
+
     }
 
-    
-    
-/*  @media */
+    textarea {
+        font-size:1em;
+        height: 8vh;
+        width: 45vw;
+    }
+
+
+
+
+
+    /* **** @media ***** */
 
     @media screen and (min-width: 768px) {
         .navbardesktop {
             display:flex;
+        }
+        header div a p {
+            margin-top:0%;
+        }
+
+        header div a img {
+            display:none;
         }
     }
 
 
     @media screen and (max-width: 768px) {
         .navbarmobile {
-            display:block;
+            display: block;
+            width: auto;
+            height: auto;
+            position: fixed;
+            margin-top: 4vh;
+            margin-left: 85vw;
         }
+
         .navbardesktop {
             display:none;
         }
 
 
-        #formulaire_Contact {
+
+        header div a p {
+            display:none;
+        }
+
+        header div a img {
+            display:block;
+            margin-top: 0.2vh;
+            width: 50px;
+            height: 50px;
+            filter: invert(100%) sepia(16%) saturate(7463%) hue-rotate(222deg) brightness(119%) contrast(115%);
+        }
+
+        header div img {
+            margin-top: 12vh;
+            width: 60vw;
+            height: 20em;
+        }
+
+        header div:hover a img {
+            filter: invert(13%) sepia(41%) saturate(7447%) hue-rotate(291deg) brightness(74%) contrast(112%);
+        }
+/*
+        header div a img:active {
+            filter: invert(52%) sepia(62%) saturate(7481%) hue-rotate(307deg) brightness(95%) contrast(114%);
+        } */
+
+        #formulaire_Contact,
+        #formulaire_Inscription {
             font-size:2em;
             width: 70%
         }
@@ -503,25 +835,43 @@ nav ul:hover li:nth-child(10)
             width: fit-content;
         }
 
-        input, select, textarea {
+        input,
+        select {
             font-size:1em;
             height: 5vh;
             width: 40vw;
         }
 
-        input[type="radio"], input[type="checkbox"] 
-        {
-            margin: 0px -100px 15px -72px;
+        input[type="submit"] {
+            font-size: 1em;
+            height: 50px;
+            border-radius: 10%/80%;
         }
+
 
         textarea {
             height: 30vh;
             width: 60vw;
         }
 
-        #contenu1_Contact {
+        #contenu1_Contact{
+        justify-content:unset;
+        height: 288vh;
+        }
+
+        #contenu1_Inscription {
             justify-content:unset;
             height: 288vh;
         }
-    }  
 
+        .bouton_inscription {
+            border-radius: 50% / 50%;
+            height: 50px;
+            width: 50px;
+            margin-top: 25px;
+            margin-left: -80vw;
+        }
+
+
+
+    }
